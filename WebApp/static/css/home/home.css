@@ -22,13 +22,13 @@ header{
     align-items: center;
     border: 2px solid black;
     padding: 20px;
-    margin-left: 60px;
+    margin-left: 400px;
     border-radius: 10px;
 }
 form{
    
     padding: 20px;
-    font-size: medium;
+    font-size: 20px;
     font-weight: bold;
     
     border-radius: 5px;
@@ -44,12 +44,14 @@ select {
 #center{
     text-align: center;
     font-weight: bold;
+    font-size: 20px;
 }
 
 #center input[type=submit]{
     padding: 5px;
     width: 50%;
-    background-color: rgb(25, 211, 202);
+    color: white;
+    background-color:#333;
 }
 label {
     display: block;
@@ -57,7 +59,8 @@ label {
 }
 #upload{
     font-weight: bolder;
-    font-size: medium;
+    font-size: 20px;
+    margin-top: 120px;
 }
 .line{
     border-right: 2px solid black;
@@ -74,10 +77,15 @@ label {
 }
 .card {
     padding: 40px;
-    margin: 30px;  
+    margin: 30px; 
+    font-size: 25px;
+    font-weight: bolder; 
+    text-align: center;
    
 }
-
+.card-deck{
+    padding: 20px;
+}
 .row {
     justify-content: center;
 }

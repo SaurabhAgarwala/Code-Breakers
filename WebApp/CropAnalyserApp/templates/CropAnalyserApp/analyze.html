@@ -67,20 +67,25 @@
     
         
     <div class="list row">  
-        <div class="card-deck">
+       
         {% for i in data_to_frontend.crop_cycle %}
         <div class="card-deck">
         <div class="card text-white bg-dark" >
-                <div class="card-header"> Sowing Date <h4>{{i.start_date}}</h4></div> 
+                <div class="card-header"> Sowing Date <h3 style="color: aliceblue;">{{i.start_date}}</h3></div> 
         
-               <div class="card-body ">Yield <h4>{{ i.yield }}</h4>
-               {% for images in i.imgs_path %}
-                        <!-- <h1>{{ images }}</h1> 
-                       Image <img src="http://0.0.0.0:8080/static/images/Clipped_NDVI/{{image}}">--></div>
-                <div class="card-footer">Harvesting Date<h4>{{ i.end_date }}</h4></div>
-        </div>   {% endfor %}
+               <div class="card-body ">Yield <h4>{{ i.yield }}</h4></div>
+              {% for image in i.imgs_path %}
+ 
+                    <div><img src="http://0.0.0.0:8080/static/images/Clipped_NDVI/{{image}}" width="200" height="200"></div> 
+                {% endfor %}
+                <div class="card-footer">Harvesting Date<h3 style="color: aliceblue;">{{ i.end_date }}</h3></div>
+                </div>   
+                
+</div>
+
+              
         {% endfor %}</div>
-</div> 
+
 
      <!-- <div class="graphs">
                 <img src="{% static 'images/graph1.jpeg' %}" alt="">
@@ -93,7 +98,7 @@
 
 
 
-        {% for i in data_to_frontend.crop_cycle %}
+        <!-- {% for i in data_to_frontend.crop_cycle %}
                Start Date <h1>{{i.start_date}}</h1>
                End Date<h1>{{ i.end_date }}</h1>
                Yield <h1>{{ i.yield }}</h1>
@@ -101,7 +106,7 @@
                         
                        Image <img src='{%static "/images/Clipped_NDVI/{{ image }}" %}'><br>
                {% endfor %}
-        {% endfor %}
+        {% endfor %} -->
 
 
 {% endblock %}

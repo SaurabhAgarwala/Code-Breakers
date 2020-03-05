@@ -163,7 +163,7 @@ def home(request):
             return render(request,'CropAnalyserApp/home.html')
         
         else:
-            generate_crop_cycles('/home/saurabh/Desktop/SIH/Dataset/Clipped_NDVI')
+            generate_crop_cycles('/home/shashank/SIH/Code-Breakers/WebApp/CropAnalyserApp/templates/CropAnalyserApp/Clipped_NDVI')
             data_to_frontend = get_season_details(dicti)
             print('##################################',data_to_frontend)
             for i in range(len(data_to_frontend['crop_cycle'])):
@@ -193,6 +193,8 @@ def home(request):
                     j[1]='jpg'
                     print(j)
                     i['imgs_path']=[j[0]+'.'+'jpg']
+            
+            print(data_to_frontend)
 
 
 
